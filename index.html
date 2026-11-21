@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dapur Resepi</title>
+<meta name="theme-color" content="#C4540F">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAL+UlEQVR4Aeyde3BU1R3HNwskISAggtDwqAEtWoeXaX2U6VhLdVrxj5Y+ZjpOp9Lq1EJ1HNrptNg/GDowCIqire1MkWqroZ2UAK2ZDtg6GQrjCCRgxFYiSciTDSHv12Y32e1viWbunty7e+/uvff8fuf8mLPLPb89v3u+v+/vk02yrwRPfGsmD3YgYweCAf7HDmThAAOUhXmcGggwQExBVg4wQFnZx8kMEDOQlQMMUFb2cXLGALF17EDCAQYo4QJfMnaAAcrYOk5MOMAAJVzgS8YOMEAZW8eJCQcYoIQLfMnYAQYoY+s4MeGA/wAlduWLMg4wQMq0Uk4hDJAc35XZlQFSppVyCmGA5PiuzK4MkDKtlFMIAyTHd2V2JQSQMp4rVQgDpFQ7/S+GAfLfc6V2ZICUaqf/xTBA/nuu1I4MkFLt9L8YBsh/z5XaUQeAlGoYtmIYIGwdIaaHASLWMGxyGSBsHSGmhwEi1jBschkgbB0hpocBItYwbHIZoBQd4ZvSO8AApfeIV6RwgAFKYQ7flN4BBii9R7wihQMMUApz+Kb0DjBA6T3iFSkcYIBSmMM3pXeAAUrvkfMVGmUwQBo124tSGSAvXNXonAyQRs32olQGyAtXNTonA6RRs70oVX2AJhXMmHbTikAwk0pl5XrRaY/OmYmtHklx/7TBYNEjO+7aX7dq9/FVz1QEc/MdbCEn14FAJEtVBujmH+0tXLcxZ9Jk8BruhJY++hwc2Byycm3Kw7NMWYCmzJo378vfMxp9430PT1uyyhixOpaVa6UHc1xZgEbD/YHYqGD9kg07hYjpVFauqRjkQWUBioUH2ipKBPdn3Hr3dBt3QrJyBbUkpsoCBO63HNkbiMfhwDjmfOEbxqnVsaxcKz1o4yoDNNR6sfN0uWD9rOX3ChHTqaxcUzGYgyoDBL43lYm/eRUs/mwgJwduSjtk5aYVZrZAWkxxgPprzyZ+IjbYmzM5d+qCzxgCloeyci0FobxBcYDA85G+Trg2jtyZc43TFMeyclNIwnaTBgD1dwmmx0aiQsRqOiIp10oPwrj6AAVyxBrjIxG7nZCVa1ef/HWiufIVuaogmD9t2uLbhVMOtXwkREynsnJNxaANKg7QzNvuCSQ/Dz/Y+F/hx2qr3sjKtdKDM644QDfc+ZDge1/NKSFiNZWVa6XHm3i2Z1UZoGDu1Llf/I7gUGfVW0LEdCor11QM5qDKAM1Z881gXoHRffjm1VV11BixOpaVa6UHbVxlgOavTXo5B/Sg453D8dEROEg7ZOWmFYZtgbIA5d346euW3SXY3X7ib0LEdCor11QM8qCyAAmvJoM2RHvau88fh4O0Q1ZuWmEIF6gL0Je+K9iduPuJxYSg6XSepFxTMciDagI0c/m9uTcsEKxve/vPQsR0KivXVAzi4MfS1ARodvFXP67vk/8G6s7BQ4ifzFL9Lys3lSbEt6kJ0Ixb7xY8b3v7dSFiNZWVa6UHeVxBgHKm5E0vWin43nHmn0LEdCor11QMiaCCAE0vWiE8/xXpCkU6Wuz0Q1auHW041ygIUHBKnuB1+HKtELGaysq10oM/riBAE03PvX7+xKDNiKxcm/KkL1MQoOGOVsHWvLmLhYjVVFaulR78cecAoa8pHKobHewxysyZPGX2575mjFgdy8q10oM/riBAYHrHafF3riU/3JUzORduSjtk5aYVhnOBmgCF3vqjYHfenEWF6zYKQdOprFxTMfiDagLUd+HdoZYawf1F6zePfdSLEBemsnIFGVSmagIE7te+8nO4No5JBTMmTb3OGLE6lpVrpQdzXFmAet6vaDq422h9xzuHJ77Py7hg/FhW7rgAQgfKAgQ9aPzL9uZDewKx0Ujn5do/bP7w+Q0QtDlk5dqUh2eZjwDJKLqhZNvpx28/s2ll6Nj+iR/1klqRrNzUqrDdqjhAYDc8EebgraiQYBiycg0SsB+qDxD2DhDXxwARb6Bs+QyQ7A4Q358BIt5A2fIZINkdIL4/BYCIW6y2fAZI7f56Xh0ugHKm5BVt2Fn8UtWa0m4eggPFL1YWPbIDLPIcCicbIAJo+s3Fq3efKHzw8fz5S5yUoMva/E8tLVy3cdWu49NuWo6nZkQAzb7jgakLbsFjDU4lBQuXzf78g3i0IQJozpr1eHzBrOT61ffjkYcFoGBufv78pXh8waykYNFtNj9s34cqsAAUi4TDIbvv3rLri6LrBpv+5/SVBd45gQUgqPDqyTK45pHWga7Ko2nX+LYAEUBNZc/211f7VjnRjQYuvd985AU84hEBFB+JVj99f2v5y/bfiYzHRx+UhEN1YM57W74CRvmwnc0tEAEEiuPR4fpXt1Q+WXzy27PGh7bf2qDwcRPgoPKJO8AcsAiMwjNwAWTqS6S7zTSufJBE4QQAiuoK0HB7I/4vEgIARbqv+O0jjv34HsidPpDw0Z1Sk88SpfCVQ+AeaKDhg3g8nuyt+jMoub/uPfx1EgAo2hXqv1iJ30p3FULJo0N97p7Ti7MRAAjK7jz1JlxrNaiUTAOgjlPlWtEDxVIpmQZAQ60fwQBbNRlQLAwSxdIACKzsOvsvuMY+XNJH5e4HyqUD0DmNAOqmUywZgHrOHx8Z6AHklR8jg729F96lUiYZgOAp6ImfXkjFZUc6Q8f2Q7GOUiQuJgMQeNR8aI/yd0Jw99Nc9hwUS2VQAmh0sLfl8PNUnM1MZ8uhPSQePxyvjhJAILql/HeRLmVf3RHpaYcCoUxCgxhA8ehwU+lOQv7alXptXdNfd0CB1w7JXBEDCHwN/fu1cNslOFBshK80QmnkiqIHUCAWaziwjZzRaQU3lGyF0tIuw7aAIECBwNWTZe3/KcVmZTZ6oBwoKpszyMolCRCYdfH3Tw5O+GMGEKc4oBAoh6Jy0EwVoFhk6MNdDyvwsBCUAIVAOdAMioMqQOA1PF9d8+Jj8VgMjokOEA8lQCFE9YNswgCB+q6qY80Hd8EB0dF4YBuUkJV42cm0AQL3Gkuf6cT0XnGQZHOA7ObDiN6kbFO2sIw8QIF4HL4LwM+hQmHIpyAYZCMXaUcefYACAXiOrPqXa7urK+wUjGENSAXBIBuDmCw1qAAQWABPQH6wfT2J7wgtR14AqSAYZCswFAEo0Ql4hPqNrRf2PhaLRhJTfBcQBvIuvU7yEWcrOxUC6FqJV0+Unt/6UKTz8rUZoiuQBMJAHiJNbkhRDSDwpK/m1Llf3Ifqs6pADEgCYSAPy3BJh4IAgTPRrlD1lrW1+34KX/cwlTgiXaG6fT8DMSBJogzvtlYTIPArPhINHX2l8onV9a89He29ChGfx0hvR/2fflX5k1WXj+4DMT7v7tt2ygI05mAsEm5987dnNq1sKNk2OtA9FvT6GjZqOPDr05tWtP7jNyDA6+3knl9xgMbMjYUH4EGXYb9eCxvpaQduYNOx3dW+1gKgwnU/XvLoswULl/nTy6mFtxR9f/vCrz/lz3Zyd9ECoPkP/MB/l6Vs6n+ZGgAUDObPk/Dnf3JnLwgEVbQ3GVL1KwzEYpHOluSq/ZiF2+pgaz92krqHBgAFAlcqSvw3mdAnbGRjjhYANf/9JXieNfE3SrKxynbuUEtNa/nLTQd3284gvFALgOA36oY3tp7dfM9Jwwfge3dc9dSd9a9ugU0Jc2FbuhYA2XaDFzp2gAFybBknGB1ggIxu8LFjBxwA5PjcnKCBAwyQBk32skQGyEt3NTg3A6RBk70skQHy0l0Nzs0AadBkL0tkgLx0V4Nz+wGQBjbqWyIDpG/vXamcAXLFRn1PwgDp23tXKmeAXLFR35MwQPr23pXKGSBXbNT3JKgB0rctdCpngOj0CqVSBghlW+iIYoDo9AqlUgYIZVvoiGKA6PQKpVIGCGVb6IhSEyA6/pNXygCRb6HcAhgguf6T350BIt9CuQUwQHL9J787A0S+hXILYIDk+k9+dwYoqYU8ceoAA+TUMV6f5AADlGQHT5w6wAA5dYzXJznAACXZwROnDjBATh3j9UkOMEBJdvDEqQMMkFPHzNdrG2WAtG29O4UzQO74qO1ZGCBtW+9O4QyQOz5qexYGSNvWu1M4A+SOj9qehQGS3Hrq2/8fAAD//y0dwpoAAAAGSURBVAMAs7TVDI4LoacAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+/* Susun atur: resepi di kiri, panel menu di kanan (di atas pada telefon). Warna: oren sambal + hijau pandan pada neutral kehijauan. */
+:root {
+  --bg: #F2F5EE;
+  --surface: #FFFFFF;
+  --surface-2: #E7EEE0;
+  --fg: #1D2B22;
+  --muted: #56675B;
+  --line: #D3DDC9;
+  --accent: #C4540F;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #FBE4D2;
+  --green: #2F7A52;
+  --green-ink: #FFFFFF;
+  --green-soft: #DCEBDD;
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111913; --surface: #1A251D; --surface-2: #233227; --fg: #E7EFE5; --muted: #9BAE9F; --line: #2E4034;
+    --accent: #F28F45; --accent-ink: #1B1006; --accent-soft: #3A2616;
+    --green: #74C795; --green-ink: #0C1F14; --green-soft: #203828;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111913; --surface: #1A251D; --surface-2: #233227; --fg: #E7EFE5; --muted: #9BAE9F; --line: #2E4034;
+  --accent: #F28F45; --accent-ink: #1B1006; --accent-soft: #3A2616;
+  --green: #74C795; --green-ink: #0C1F14; --green-soft: #203828;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.app { max-width: 1180px; margin: 0 auto; display: grid; gap: 20px; }
+
+.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; }
+.top h1 { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 32px; line-height: 1.05; letter-spacing: -0.01em; }
+.top p { margin: 4px 0 0; color: var(--muted); }
+.search { flex: 1 1 280px; max-width: 460px; }
+.search input {
+  width: 100%; min-height: 48px; padding: 0 16px; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: inherit;
+}
+.search input::placeholder { color: var(--muted); }
+
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 20px; align-items: start; }
+
+/* Panel menu */
+.menu {
+  position: sticky; top: 16px; display: flex; flex-direction: column; gap: 12px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px;
+}
+.menu-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.menu-head h2 { margin: 0; font-family: var(--font-display); font-size: 20px; font-weight: 800; }
+.menu-head span { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  min-height: 40px; padding: 0 14px; border-radius: 999px; white-space: nowrap;
+  border: 1px solid var(--line); background: var(--surface); font-size: 14px; font-weight: 600;
+}
+.chip[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: var(--green-ink); }
+.list { display: flex; flex-direction: column; gap: 6px; }
+.item {
+  display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 12px;
+  width: 100%; min-height: 60px; padding: 8px 12px; text-align: left;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
+}
+.item:hover { border-color: var(--accent); }
+.item .ic { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--surface-2); font-size: 26px; }
+.item .tx { display: grid; min-width: 0; }
+.item .nm { font-weight: 700; line-height: 1.25; }
+.item .sub { font-size: 13px; color: var(--muted); }
+.item .st { font-size: 16px; color: var(--accent); }
+.item[aria-current="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.item[aria-current="true"] .ic { background: color-mix(in srgb, var(--accent-ink) 20%, transparent); }
+.item[aria-current="true"] .sub, .item[aria-current="true"] .st { color: var(--accent-ink); opacity: 0.9; }
+.empty { margin: 4px 0; padding: 12px; border-radius: 12px; background: var(--surface-2); color: var(--muted); font-size: 14px; }
+
+/* Resepi */
+.recipe { display: grid; gap: 16px; min-width: 0; }
+.hero { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: center; padding: 24px; border-radius: 20px; background: var(--accent-soft); }
+.hero.t-g { background: var(--green-soft); }
+.tile { display: grid; place-items: center; width: 108px; height: 108px; border-radius: 26px; background: var(--surface); font-size: 58px; }
+.hero-info { display: grid; gap: 8px; justify-items: start; min-width: 0; }
+.pill { padding: 3px 12px; border-radius: 999px; background: var(--surface); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.hero h2 { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 36px; line-height: 1.08; letter-spacing: -0.01em; text-wrap: balance; }
+.hero p { margin: 0; max-width: 60ch; }
+.fav { min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--fg); background: transparent; font-weight: 700; }
+.fav[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+.fact { padding: 12px 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.fact .k { font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.fact .v { font-family: var(--font-display); font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.fact .v small { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--muted); }
+.stepper { display: flex; align-items: center; gap: 10px; }
+.stepper button { width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); font-size: 22px; font-weight: 700; line-height: 1; }
+.stepper button:disabled { opacity: 0.4; cursor: default; }
+.stepper output { min-width: 2ch; text-align: center; font-family: var(--font-display); font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums; }
+
+.cols { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 16px; align-items: start; }
+.panel { min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.panel h3 { margin: 0 0 12px; font-family: var(--font-display); font-size: 20px; font-weight: 800; }
+.ing { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
+.ing label { display: flex; align-items: flex-start; gap: 10px; min-height: 40px; padding: 8px 0; border-bottom: 1px solid var(--line); cursor: pointer; }
+.ing li:last-child label { border-bottom: 0; }
+.ing input { width: 20px; height: 20px; margin: 2px 0 0; flex: none; accent-color: var(--green); }
+.ing .q { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+.ing label:has(input:checked) { color: var(--muted); text-decoration: line-through; }
+.ing label:has(input:checked) .q { color: var(--muted); }
+.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 16px; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--green); color: var(--green-ink); font-weight: 800; font-variant-numeric: tabular-nums; }
+.steps li span { padding-top: 4px; }
+
+.tip { padding: 16px 20px; border-radius: 16px; background: var(--green-soft); }
+.tip b { display: block; font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--green); margin-bottom: 4px; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.primary { min-height: 48px; padding: 0 22px; border: 0; border-radius: 12px; background: var(--accent); color: var(--accent-ink); font-weight: 700; }
+#status { color: var(--muted); font-size: 14px; }
+#salin-teks { width: 100%; min-height: 180px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--fg); font: 14px/1.5 var(--font-body); }
+
+/* Tambahan: borang, sandaran dan butang menu */
+.menu-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.menu-actions .primary { flex: 1 1 auto; }
+.ghost { min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); font-weight: 700; }
+.ghost.danger { border-color: var(--accent); color: var(--accent); }
+.form, .backup { display: grid; gap: 14px; }
+.form-title { margin: 0; font-family: var(--font-display); font-size: 26px; font-weight: 800; }
+.backup h3 { margin: 6px 0 0; }
+.backup p, .panel p { margin: 0; }
+.fld { display: grid; gap: 4px; min-width: 0; }
+.fld label { font-weight: 700; font-size: 14px; }
+.fld .hint { font-size: 13px; color: var(--muted); }
+.fld input, .fld textarea { width: 100%; min-height: 48px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: inherit; }
+.fld textarea { resize: vertical; line-height: 1.5; }
+.fld input::placeholder, .fld textarea::placeholder { color: var(--muted); }
+.row2 { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px; }
+.row3 { align-items: end; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.btnrow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.ralat { padding: 10px 14px; border-radius: 12px; background: var(--accent-soft); font-weight: 700; }
+.src { margin: 0; color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+.src a { color: var(--accent); }
+#status-sb, #status-sb2, #status-sb3 { color: var(--muted); font-size: 14px; }
+
+.katform { display: grid; gap: 10px; }
+.katlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.katlist li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 12px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 12px; }
+.katlist .kn { font-weight: 700; overflow-wrap: anywhere; }
+.katlist .kc { color: var(--muted); font-size: 14px; }
+.katlist .ghost { min-height: 40px; }
+.hint { font-size: 13px; color: var(--muted); }
+#status-kat { color: var(--muted); font-size: 14px; min-height: 1.2em; }
+@media (max-width: 860px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .menu { order: -1; position: static; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+  .list { flex-direction: row; overflow-x: auto; padding-bottom: 6px; }
+  .item { flex: none; width: 210px; }
+}
+@media (max-width: 760px) {
+  .cols { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 520px) {
+  .top h1 { font-size: 28px; }
+  .hero { grid-template-columns: minmax(0, 1fr); padding: 20px; gap: 14px; }
+  .tile { width: 76px; height: 76px; border-radius: 20px; font-size: 42px; }
+  .hero h2 { font-size: 30px; }
+  .panel { padding: 16px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .item, .chip, .fav { transition: background-color 0.15s, border-color 0.15s; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <header class="top">
+    <div>
+      <h1>Dapur Resepi</h1>
+      <p>Simpan resepi sendiri dan resepi pilihan anda di sini.</p>
+    </div>
+    <div class="search">
+      <label class="sr" for="cari">Cari resepi</label>
+      <input id="cari" type="search" placeholder="Cari resepi atau bahan" autocomplete="off">
+    </div>
+  </header>
+
+  <div class="layout">
+    <main id="resepi" class="recipe" aria-live="polite"></main>
+
+    <aside class="menu" aria-label="Menu resepi">
+      <div class="menu-head"><h2>Menu resepi</h2><span id="hitung"></span></div>
+      <div class="menu-actions"><button type="button" class="primary" id="btn-tambah">+ Tambah resepi</button><button type="button" class="ghost" id="btn-kategori">Kategori</button><button type="button" class="ghost" id="btn-sandaran">Sandaran</button></div>
+      <div class="chips" id="chips"></div>
+      <div class="list" id="senarai"></div>
+    </aside>
+  </div>
+</div>
+
+<script>
+
+// Resepi contoh. Resepi anda sendiri ditambah melalui butang "Tambah resepi" dalam halaman.
+// Kategori: tambah nama baru dalam CATS. Kategori dalam GREEN guna warna hijau, selainnya oren.
+
+var CATS = ['Nasi', 'Lauk Ayam', 'Lauk Ikan', 'Sayur', 'Kuih', 'Minuman', 'Sup'];
+var GREEN = { 'Sayur': 1, 'Sup': 1, 'Lauk Ikan': 1, 'Kerabu': 1 };
+
+// TAMBAH RESEPI BARU DI SINI: salin satu blok {...} dan ubah isinya.
+// i = bahan [kuantiti, unit, nama]; kuantiti null = "secukupnya" (unit dipaparkan sahaja).
+var R = [
+  { id: 'nasi-lemak', n: 'Nasi Lemak', c: 'Nasi', e: '🍚', pr: 20, ck: 35, sv: 4,
+    d: 'Nasi santan wangi bersama sambal tumis, ikan bilis, telur dan timun.',
+    i: [[2,'cawan','beras, dibasuh'],[1,'cawan','santan pekat'],[1,'cawan','air'],[2,'helai','daun pandan, disimpul'],[2,'keping','halia'],[1,'sdt','garam untuk nasi'],
+        [1,'cawan','ikan bilis, dibersihkan'],[2,'biji','bawang besar, dihiris'],[15,'biji','cili kering, direndam dan dikisar'],[3,'ulas','bawang putih'],[1,'sdt','belacan'],[1,'sdb','air asam jawa'],[1,'sdb','gula'],[4,'sdb','minyak masak'],
+        [4,'biji','telur, direbus'],[1,'batang','timun, dihiris'],[0.5,'cawan','kacang tanah, digoreng']],
+    s: ['Campurkan beras, santan, air, garam, halia dan daun pandan dalam periuk nasi. Masak hingga nasi masak, kemudian biarkan 10 minit sebelum dikacau.',
+        'Goreng ikan bilis hingga garing dan toskan. Goreng kacang tanah dan ketepikan.',
+        'Panaskan minyak, tumis bawang besar, bawang putih dan belacan hingga layu dan wangi. Masukkan cili kisar dan masak hingga pecah minyak.',
+        'Masukkan air asam jawa, gula dan garam secukup rasa. Masukkan ikan bilis dan kacau hingga sambal pekat.',
+        'Hidangkan nasi bersama sambal, telur rebus, timun dan kacang tanah.'],
+    t: 'Gunakan santan dan air pada kadar 1:1 untuk nasi yang lemak tetapi tidak berminyak. Masak sambal dengan api kecil supaya tidak pahit.' },
+
+  { id: 'nasi-goreng-kampung', n: 'Nasi Goreng Kampung', c: 'Nasi', e: '🍳', pr: 10, ck: 15, sv: 3,
+    d: 'Nasi goreng pedas yang ringkas dengan ikan bilis dan daun kangkung.',
+    i: [[4,'cawan','nasi putih sejuk'],[3,'ulas','bawang putih'],[4,'biji','bawang merah'],[5,'biji','cili api'],[3,'sdb','ikan bilis, digoreng'],[2,'biji','telur'],[1,'cawan','daun kangkung, dihiris'],[1,'sdb','kicap manis'],[0.5,'sdt','garam'],[3,'sdb','minyak masak']],
+    s: ['Tumbuk atau kisar kasar bawang putih, bawang merah dan cili api.',
+        'Panaskan minyak, tumis bahan kisar hingga wangi dan layu.',
+        'Masukkan telur dan kacau hingga separuh masak.',
+        'Masukkan nasi, kicap manis dan garam. Gaul rata dengan api besar.',
+        'Masukkan ikan bilis dan daun kangkung, kacau seminit lagi dan angkat.'],
+    t: 'Nasi yang disejukkan semalam menghasilkan nasi goreng yang berderai dan tidak lembik.' },
+
+  { id: 'ayam-masak-merah', n: 'Ayam Masak Merah', c: 'Lauk Ayam', e: '🥘', pr: 20, ck: 35, sv: 5,
+    d: 'Ayam dalam kuah tomato dan cili yang pekat, sesuai untuk hidangan kenduri.',
+    i: [[1,'kg','ayam, dipotong'],[1,'sdt','serbuk kunyit'],[1.5,'sdt','garam'],[2,'biji','bawang besar, dikisar'],[4,'ulas','bawang putih, dikisar'],[2,'cm','halia, dikisar'],
+        [10,'biji','cili kering, direndam dan dikisar'],[1,'biji','bunga lawang'],[1,'batang','kayu manis'],[2,'biji','buah pelaga'],[3,'sdb','sos tomato'],[2,'sdb','sos cili'],[1,'sdb','gula'],[1,'cawan','air'],[1,'biji','bawang besar, dihiris untuk hiasan'],[4,'sdb','minyak masak']],
+    s: ['Perap ayam dengan serbuk kunyit dan separuh garam selama 15 minit. Goreng hingga separuh masak dan toskan.',
+        'Dalam minyak yang sama, tumis bunga lawang, kayu manis dan buah pelaga hingga wangi.',
+        'Masukkan bawang besar, bawang putih dan halia kisar, masak hingga layu. Masukkan cili kisar dan masak hingga pecah minyak.',
+        'Masukkan sos tomato, sos cili, gula dan baki garam. Kacau rata.',
+        'Masukkan ayam dan air. Reneh dengan api kecil kira-kira 15 minit hingga kuah pekat dan ayam empuk.',
+        'Taburkan hirisan bawang besar, masak seminit dan angkat.'],
+    t: 'Goreng ayam dahulu supaya kulitnya kekal utuh dan kuah tidak menjadi keruh.' },
+
+  { id: 'ayam-goreng-berempah', n: 'Ayam Goreng Berempah', c: 'Lauk Ayam', e: '🍗', pr: 20, ck: 20, sv: 4,
+    d: 'Ayam goreng rangup dengan rempah kunyit, ketumbar dan daun kari. Perap sekurang-kurangnya 30 minit.',
+    i: [[1,'kg','ayam, dipotong 8 ketul'],[1,'sdt','serbuk kunyit'],[2,'sdb','serbuk ketumbar'],[1,'sdt','serbuk jintan manis'],[4,'ulas','bawang putih, ditumbuk'],[2,'cm','halia, ditumbuk'],[2,'batang','serai, dititik'],[2,'sdb','tepung beras'],[1,'sdt','garam'],[2,'tangkai','daun kari'],[2,'cawan','minyak untuk menggoreng']],
+    s: ['Gaulkan ayam dengan serbuk kunyit, ketumbar, jintan manis, bawang putih, halia, serai, tepung beras dan garam.',
+        'Perap sekurang-kurangnya 30 minit, atau semalaman dalam peti sejuk.',
+        'Panaskan minyak dengan api sederhana. Goreng ayam hingga perang keemasan dan masak sepenuhnya, kira-kira 15 hingga 20 minit.',
+        'Goreng daun kari hingga garing dan taburkan di atas ayam.'],
+    t: 'Api sederhana memastikan bahagian dalam ayam masak tanpa kulit hangus. Toskan atas tuala dapur supaya tidak berminyak.' },
+
+  { id: 'asam-pedas-ikan', n: 'Asam Pedas Ikan', c: 'Lauk Ikan', e: '🐟', pr: 20, ck: 25, sv: 4,
+    d: 'Ikan dalam kuah masam pedas dengan daun kesum dan bendi.',
+    i: [[500,'g','ikan tenggiri atau pari, dipotong'],[12,'biji','cili kering, direndam dan dikisar'],[6,'biji','bawang merah'],[3,'ulas','bawang putih'],[2,'cm','halia'],[1,'sdt','belacan'],[2,'batang','serai, dititik'],[3,'keping','asam keping'],[2,'sdb','asam jawa, dilarutkan dalam air'],
+        [1,'genggam','daun kesum'],[8,'batang','bendi'],[2,'biji','tomato, dibelah empat'],[3,'cawan','air'],[1,'sdt','garam'],[1,'sdt','gula'],[3,'sdb','minyak masak']],
+    s: ['Kisar cili kering, bawang merah, bawang putih, halia dan belacan hingga halus.',
+        'Panaskan minyak, tumis bahan kisar bersama serai hingga pecah minyak dan wangi.',
+        'Masukkan air, asam keping dan air asam jawa. Didihkan.',
+        'Masukkan ikan dan bendi. Reneh dengan api kecil kira-kira 10 minit.',
+        'Masukkan tomato, garam dan gula. Masak 3 minit, masukkan daun kesum dan angkat.'],
+    t: 'Jangan kacau terlalu kerap selepas ikan dimasukkan supaya isi ikan tidak hancur.' },
+
+  { id: 'sayur-campur-goreng', n: 'Sayur Campur Goreng', c: 'Sayur', e: '🥦', pr: 15, ck: 10, sv: 4,
+    d: 'Sayur goreng cepat dengan udang dan sos tiram.',
+    i: [[2,'cawan','kobis, dihiris'],[1,'batang','lobak merah, dihiris nipis'],[1,'cawan','kembang kol, dipotong kecil'],[6,'batang','kacang panjang, dipotong'],[100,'g','udang, dikupas'],[3,'ulas','bawang putih, dicincang'],[1,'sdb','sos tiram'],[0.5,'sdt','garam'],[3,'sdb','air'],[2,'sdb','minyak masak']],
+    s: ['Panaskan minyak, tumis bawang putih hingga wangi.',
+        'Masukkan udang dan goreng hingga bertukar warna.',
+        'Masukkan lobak merah, kembang kol dan kacang panjang. Kacau 2 minit dengan api besar.',
+        'Masukkan kobis, sos tiram, garam dan air. Kacau 2 minit lagi dan angkat selagi sayur masih rangup.'],
+    t: 'Masukkan sayur yang keras dahulu dan sayur yang cepat layu terakhir supaya semuanya masak sekata.' },
+
+  { id: 'kangkung-goreng-belacan', n: 'Kangkung Goreng Belacan', c: 'Sayur', e: '🥬', pr: 10, ck: 6, sv: 3,
+    d: 'Kangkung digoreng dengan belacan, cili dan udang kering.',
+    i: [[400,'g','kangkung, dipotong'],[1,'sdt','belacan'],[3,'ulas','bawang putih'],[3,'biji','cili merah'],[3,'biji','cili api'],[1,'sdb','udang kering, direndam'],[1,'sdt','gula'],[null,'secukupnya','garam'],[2,'sdb','minyak masak']],
+    s: ['Tumbuk bawang putih, cili merah, cili api dan belacan hingga kasar.',
+        'Panaskan minyak dengan api besar. Tumis bahan tumbuk dan udang kering hingga wangi.',
+        'Masukkan kangkung, gula dan garam. Kacau pantas selama 2 hingga 3 minit.',
+        'Angkat dan hidang segera.'],
+    t: 'Guna api paling besar dan masa yang singkat supaya kangkung kekal hijau dan rangup.' },
+
+  { id: 'pengat-pisang', n: 'Pengat Pisang', c: 'Kuih', e: '🍌', pr: 10, ck: 15, sv: 4,
+    d: 'Pisang dalam santan dan gula melaka, sedap dihidang panas atau sejuk.',
+    i: [[5,'biji','pisang nangka, dipotong'],[2,'cawan','santan'],[1,'cawan','air'],[100,'g','gula melaka, disikat'],[2,'helai','daun pandan, disimpul'],[0.25,'sdt','garam']],
+    s: ['Didihkan air, gula melaka dan daun pandan hingga gula larut.',
+        'Masukkan pisang dan reneh 5 minit hingga sedikit lembut.',
+        'Masukkan santan dan garam. Kacau perlahan dengan api kecil hingga hampir mendidih. Jangan biarkan santan pecah minyak.',
+        'Angkat dan hidang.'],
+    t: 'Pilih pisang yang masak tetapi masih keras supaya tidak hancur semasa direneh.' },
+
+  { id: 'teh-tarik', n: 'Teh Tarik', c: 'Minuman', e: '☕', pr: 5, ck: 5, sv: 2,
+    d: 'Teh pekat bersusu yang ditarik hingga berbuih.',
+    i: [[2,'cawan','air'],[2,'sdb','daun teh'],[3,'sdb','susu pekat manis'],[4,'sdb','susu sejat']],
+    s: ['Didihkan air, masukkan daun teh dan reneh 3 minit hingga pekat.',
+        'Tapis air teh ke dalam jag.',
+        'Masukkan susu pekat manis dan susu sejat. Kacau.',
+        'Tuang berulang-ulang antara dua jag dari ketinggian hingga berbuih.'],
+    t: 'Buih lebih tebal jika teh masih panas. Jauhkan jag sedikit demi sedikit semasa menuang.' },
+
+  { id: 'sup-ayam', n: 'Sup Ayam', c: 'Sup', e: '🍲', pr: 15, ck: 40, sv: 4,
+    d: 'Sup ayam berempah dengan lobak merah dan kentang.',
+    i: [[500,'g','ayam, dipotong kecil'],[6,'cawan','air'],[3,'biji','bawang merah'],[3,'ulas','bawang putih'],[2,'cm','halia'],[1,'biji','bunga lawang'],[1,'batang','kayu manis'],[2,'biji','buah pelaga'],[1,'batang','lobak merah, dipotong'],[2,'biji','kentang, dipotong'],[1,'batang','daun sup, dicincang'],[1,'sdt','garam'],[0.5,'sdt','lada sulah'],[2,'sdb','bawang goreng'],[2,'sdb','minyak masak']],
+    s: ['Tumbuk bawang merah, bawang putih dan halia. Tumis dengan minyak bersama bunga lawang, kayu manis dan buah pelaga hingga wangi.',
+        'Masukkan ayam dan air. Didihkan dan buang buih di permukaan.',
+        'Reneh 20 minit, masukkan lobak merah dan kentang. Masak 15 hingga 20 minit lagi hingga empuk.',
+        'Perasakan dengan garam dan lada sulah.',
+        'Taburkan daun sup dan bawang goreng sebelum dihidang.'],
+    t: 'Buang buih awal-awal supaya kuah jernih. Sedap dimakan dengan bihun, nasi impit atau sambal kicap.' }
+];
+
+
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var KEY_MINE = 'dapur-resepi-saya', KEY_HIDE = 'dapur-resepi-sorok', KEY_FAV = 'dapur-resepi-fav', KEY_KAT = 'dapur-resepi-kat';
+  var SAMPLES = R.slice();
+
+  /* ---------- Bantuan umum ---------- */
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function str(v) { return String(v == null ? '' : v).trim(); }
+  function num(v, d) { v = parseFloat(v); return isFinite(v) && v >= 0 ? Math.round(v) : d; }
+  function read(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
+  function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } }
+  function newId(n) {
+    var slug = str(n).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'resepi';
+    return slug + '-' + Date.now().toString(36) + Math.floor(Math.random() * 1296).toString(36);
+  }
+
+  /* ---------- Baca bahan daripada teks ---------- */
+  var FR = { '½': 0.5, '¼': 0.25, '¾': 0.75, '⅓': 1 / 3, '⅔': 2 / 3 };
+  var UNITS = { cawan: 'cawan', cup: 'cawan', sdb: 'sdb', tbsp: 'sdb', sdt: 'sdt', tsp: 'sdt', g: 'g', gm: 'g', gram: 'g', kg: 'kg', ml: 'ml', l: 'l', liter: 'l',
+    biji: 'biji', ulas: 'ulas', batang: 'batang', helai: 'helai', keping: 'keping', cm: 'cm', tangkai: 'tangkai', genggam: 'genggam',
+    ekor: 'ekor', ketul: 'ketul', labu: 'labu', cubit: 'cubit', bungkus: 'bungkus', paket: 'paket', tin: 'tin' };
+  function toNum(t) {
+    var m;
+    t = t.trim();
+    if ((m = t.match(/^(\d+)\s+(\d+)\/(\d+)$/))) return +m[1] + m[2] / m[3];
+    if ((m = t.match(/^(\d+)\/(\d+)$/))) return m[1] / m[2];
+    if ((m = t.match(/^(\d+(?:[.,]\d+)?)?\s*([½¼¾⅓⅔])$/))) return (m[1] ? parseFloat(m[1].replace(',', '.')) : 0) + FR[m[2]];
+    return parseFloat(t.replace(',', '.'));
+  }
+  // Hasil: [kuantiti atau null, unit, nama]
+  function parseLine(raw) {
+    var line = String(raw).replace(/^[\s\-•*·]+/, '').trim();
+    if (!line) return null;
+    line = line.replace(/\bsudu\s+(besar|makan)\b/gi, 'sdb').replace(/\bsudu\s+teh\b/gi, 'sdt');
+    if (/^\d+\s*[-–]\s*\d/.test(line)) return [null, '', line];
+    var m = line.match(/^(\d+\s+\d+\/\d+|\d+\/\d+|\d+(?:[.,]\d+)?\s*[½¼¾⅓⅔]|[½¼¾⅓⅔]|\d+(?:[.,]\d+)?)\s*([A-Za-z]+)?\.?\s*(.*)$/);
+    if (!m) return [null, '', line];
+    var q = toNum(m[1]);
+    if (!(q > 0)) return [null, '', line];
+    var w = (m[2] || '').toLowerCase(), rest = m[3].trim();
+    if (w && UNITS[w]) return [q, UNITS[w], rest];
+    return [q, '', ((m[2] || '') + (m[2] && rest ? ' ' : '') + rest).trim()];
+  }
+
+  function clean(r) {
+    if (!r || !str(r.n)) return null;
+    var i = (Array.isArray(r.i) ? r.i : []).map(function (x) {
+      if (!Array.isArray(x) || x.length < 3) return null;
+      var q = x[0] === null ? null : +x[0];
+      return [q > 0 ? q : null, str(x[1]), str(x[2])];
+    }).filter(Boolean);
+    var s = (Array.isArray(r.s) ? r.s : []).map(str).filter(Boolean);
+    var id = str(r.id).replace(/[^a-zA-Z0-9_-]/g, '') || newId(r.n);
+    return { id: id, n: str(r.n), c: str(r.c) || 'Lain-lain', e: str(r.e) || '🍽️', pr: num(r.pr, 0), ck: num(r.ck, 0),
+      sv: Math.max(1, num(r.sv, 4)), d: str(r.d), i: i, s: s, t: str(r.t), src: str(r.src), raw: str(r.raw), u: 1 };
+  }
+
+  /* ---------- Data dan keadaan ---------- */
+  var mineRaw = read(KEY_MINE, []);
+  var mine = (Array.isArray(mineRaw) ? mineRaw : []).map(clean).filter(Boolean);
+  var hidden = {}, favs = {};
+  (function (h, f) {
+    (Array.isArray(h) ? h : []).forEach(function (k) { if (typeof k === 'string') hidden[k] = 1; });
+    (Array.isArray(f) ? f : []).forEach(function (k) { if (typeof k === 'string') favs[k] = 1; });
+  })(read(KEY_HIDE, []), read(KEY_FAV, []));
+  var serv = {}, checked = {}, notice = '';
+  var state = { cat: 'Semua', q: '', onlyFav: false, sel: '', view: 'resepi', editId: null };
+
+  function all() { return mine.concat(SAMPLES.filter(function (r) { return !hidden[r.id]; })); }
+  function byId(id) { var a = all(); for (var k = 0; k < a.length; k++) if (a[k].id === id) return a[k]; return null; }
+  function mineIndex(id) { for (var k = 0; k < mine.length; k++) if (mine[k].id === id) return k; return -1; }
+  function favCount() { return Object.keys(favs).length; }
+  function saveFavs() { write(KEY_FAV, Object.keys(favs)); }
+  var katRaw = read(KEY_KAT, null);
+  var catList = Array.isArray(katRaw) ? katRaw.map(str).filter(Boolean) : CATS.slice();
+  function saveCats() { return write(KEY_KAT, catList); }
+  function cats() {
+    var out = catList.slice();
+    all().forEach(function (r) { if (out.indexOf(r.c) === -1) out.push(r.c); });
+    return out;
+  }
+  state.sel = (all()[0] || {}).id || '';
+
+  function fmtQty(q, u) {
+    if (q === null) return u;
+    if (u === 'g') return q >= 1000 ? (Math.round(q / 100) / 10) + ' kg' : Math.max(5, Math.round(q / 5) * 5) + ' g';
+    var r = q >= 10 ? Math.round(q) : Math.round(q * 4) / 4;
+    if (r === 0) r = 0.25;
+    var w = Math.floor(r), f = Math.round((r - w) * 4) / 4;
+    var F = { 0: '', 0.25: '¼', 0.5: '½', 0.75: '¾' };
+    return (w ? w : '') + F[f] + (u ? ' ' + u : '');
+  }
+  function lineOf(x) { return x[0] === null ? ((x[1] ? x[1] + ' ' : '') + x[2]) : (fmtQty(x[0], x[1]) + ' ' + x[2]).trim(); }
+
+  function visible() {
+    var t = state.q.trim().toLowerCase();
+    return all().filter(function (r) {
+      if (state.cat !== 'Semua' && r.c !== state.cat) return false;
+      if (state.onlyFav && !favs[r.id]) return false;
+      if (!t) return true;
+      var hay = (r.n + ' ' + r.c + ' ' + r.i.map(function (x) { return x[2]; }).join(' ')).toLowerCase();
+      return hay.indexOf(t) !== -1;
+    });
+  }
+
+  /* ---------- Menu ---------- */
+  function renderChips() {
+    var list = cats();
+    if (state.cat !== 'Semua' && list.indexOf(state.cat) === -1) state.cat = 'Semua';
+    var items = ['Semua'].concat(list);
+    var html = items.map(function (c) {
+      return '<button type="button" class="chip" data-cat="' + esc(c) + '" aria-pressed="' + (state.cat === c) + '">' + esc(c) + '</button>';
+    }).join('');
+    html += '<button type="button" class="chip" id="chip-fav" aria-pressed="' + state.onlyFav + '">★ Kegemaran (' + favCount() + ')</button>';
+    $('chips').innerHTML = html;
+  }
+  function renderList() {
+    var list = visible();
+    $('hitung').textContent = list.length + ' resepi';
+    if (!list.length) {
+      $('senarai').innerHTML = '<p class="empty">' + (!all().length
+        ? 'Belum ada resepi. Tekan Tambah resepi untuk mula.'
+        : state.onlyFav && !favCount() ? 'Belum ada kegemaran. Tekan butang Kegemaran pada mana-mana resepi.'
+        : 'Tiada resepi sepadan. Cuba kata kunci atau kategori lain.') + '</p>';
+      return;
+    }
+    $('senarai').innerHTML = list.map(function (r) {
+      return '<button type="button" class="item" data-id="' + esc(r.id) + '" aria-current="' + (r.id === state.sel && state.view === 'resepi') + '">' +
+        '<span class="ic" aria-hidden="true">' + esc(r.e) + '</span>' +
+        '<span class="tx"><span class="nm">' + esc(r.n) + '</span><span class="sub">' + esc(r.c) + '</span></span>' +
+        '<span class="st" aria-hidden="true">' + (favs[r.id] ? '★' : '') + '</span></button>';
+    }).join('');
+  }
+  function markActive() {
+    var els = $('senarai').querySelectorAll('.item');
+    for (var k = 0; k < els.length; k++) els[k].setAttribute('aria-current', String(state.view === 'resepi' && els[k].getAttribute('data-id') === state.sel));
+  }
+
+  /* ---------- Paparan resepi ---------- */
+  function ingHtml(r) {
+    var s = serv[r.id] || r.sv, k = s / r.sv, set = checked[r.id] || (checked[r.id] = {});
+    return r.i.map(function (x, n) {
+      var q = x[0] === null ? x[1] : fmtQty(x[0] * k, x[1]);
+      var id = 'bahan-' + r.id + '-' + n;
+      return '<li><label for="' + esc(id) + '"><input type="checkbox" id="' + esc(id) + '" data-n="' + n + '"' + (set[n] ? ' checked' : '') + '>' +
+        '<span><span class="q">' + esc(q) + '</span> ' + esc(x[2]) + '</span></label></li>';
+    }).join('');
+  }
+  function srcHtml(s) {
+    if (!s) return '';
+    var link = /^https?:\/\/\S+$/i.test(s) ? '<a href="' + esc(s) + '" target="_blank" rel="noopener noreferrer">' + esc(s) + '</a>' : esc(s);
+    return '<p class="src">Sumber: ' + link + '</p>';
+  }
+  function renderRecipe() {
+    var r = byId(state.sel);
+    if (!r) {
+      $('resepi').innerHTML = '<section class="panel"><h2 class="form-title">Belum ada resepi</h2>' +
+        '<p>Tekan Tambah resepi di menu untuk menyimpan resepi pertama anda.</p></section>';
+      return;
+    }
+    var s = serv[r.id] || r.sv;
+    $('resepi').innerHTML =
+      '<article class="recipe">' +
+      '<div class="hero ' + (GREEN[r.c] ? 't-g' : 't-a') + '">' +
+        '<div class="tile" aria-hidden="true">' + esc(r.e) + '</div>' +
+        '<div class="hero-info"><span class="pill">' + esc(r.c) + '</span><h2>' + esc(r.n) + '</h2>' + (r.d ? '<p>' + esc(r.d) + '</p>' : '') +
+        '<button type="button" class="fav" id="fav" data-act="fav" aria-pressed="' + !!favs[r.id] + '">' + (favs[r.id] ? '★ Dalam kegemaran' : '☆ Simpan kegemaran') + '</button></div>' +
+      '</div>' +
+      '<div class="facts">' +
+        '<div class="fact"><div class="k">Hidangan</div><div class="stepper">' +
+          '<button type="button" id="kurang" data-act="dec" aria-label="Kurangkan hidangan">−</button>' +
+          '<output id="bil" for="kurang tambah">' + s + '</output>' +
+          '<button type="button" id="tambah" data-act="inc" aria-label="Tambah hidangan">+</button></div></div>' +
+      '</div>' +
+      '<div class="cols">' +
+        '<section class="panel"><h3>Bahan-bahan</h3><ul class="ing" id="bahan">' + ingHtml(r) + '</ul></section>' +
+        '<section class="panel"><h3>Cara memasak</h3><ol class="steps">' + r.s.map(function (t) { return '<li><span>' + esc(t) + '</span></li>'; }).join('') + '</ol></section>' +
+      '</div>' +
+      (r.t ? '<div class="tip"><b>Tip</b>' + esc(r.t) + '</div>' : '') +
+      srcHtml(r.src) +
+      '<div class="actions"><button type="button" class="primary" id="salin" data-act="copy">Salin resepi</button>' +
+        (r.u ? '<button type="button" class="ghost" data-act="edit">Ubah</button>' : '') +
+        '<button type="button" class="ghost danger" data-act="del">Padam</button>' +
+        '<span id="status" role="status"></span></div>' +
+      '<textarea id="salin-teks" readonly hidden aria-label="Teks resepi"></textarea>' +
+      '</article>';
+    syncStepper(r);
+  }
+  function syncStepper(r) {
+    var s = serv[r.id] || r.sv;
+    $('bil').textContent = s;
+    $('kurang').disabled = s <= 1;
+    $('tambah').disabled = s >= 20;
+  }
+  function say(msg, id) {
+    var el = $(id || 'status'); if (!el) return;
+    el.textContent = msg;
+    setTimeout(function () { if (el.textContent === msg) el.textContent = ''; }, 6000);
+  }
+  function recipeText(r) {
+    var s = serv[r.id] || r.sv, k = s / r.sv;
+    return r.n + ' (' + s + ' hidangan)\n' + '\nBAHAN-BAHAN\n' +
+      r.i.map(function (x) { return '- ' + (x[0] === null ? lineOf(x) : lineOf([x[0] * k, x[1], x[2]])); }).join('\n') +
+      '\n\nCARA MEMASAK\n' + r.s.map(function (t, n) { return (n + 1) + '. ' + t; }).join('\n') +
+      (r.t ? '\n\nTip: ' + r.t : '') + (r.src ? '\n\nSumber: ' + r.src : '');
+  }
+  function copyText(text, area, statusId, okMsg, failMsg) {
+    function fb() {
+      if (area) { area.hidden = false; area.value = text; area.focus(); area.select(); }
+      say(failMsg, statusId);
+    }
+    try { navigator.clipboard.writeText(text).then(function () { say(okMsg, statusId); }, fb); } catch (e) { fb(); }
+  }
+
+  /* ---------- Borang tambah / ubah ---------- */
+  function fld(id, label, control, hint) {
+    return '<div class="fld"><label for="' + id + '">' + label + '</label>' + control + (hint ? '<span class="hint">' + hint + '</span>' : '') + '</div>';
+  }
+  function renderForm() {
+    var r = state.editId ? byId(state.editId) : null;
+    var v = r || { n: '', c: '', e: '🍽️', pr: '', ck: '', sv: 4, d: '', t: '', src: '' };
+    var bahan = r ? (r.raw || r.i.map(lineOf).join('\n')) : '';
+    var langkah = r ? r.s.join('\n') : '';
+    $('resepi').innerHTML = '<form id="borang" class="panel form" novalidate>' +
+      '<h2 class="form-title">' + (r ? 'Ubah resepi' : 'Tambah resepi') + '</h2>' +
+      fld('f-nama', 'Nama resepi', '<input id="f-nama" type="text" autocomplete="off" value="' + esc(v.n) + '">') +
+      '<div class="row2">' +
+        fld('f-ikon', 'Ikon', '<input id="f-ikon" type="text" maxlength="8" value="' + esc(v.e) + '">') +
+        fld('f-kat', 'Kategori', '<input id="f-kat" type="text" list="senarai-kat" autocomplete="off" placeholder="Pilih atau taip baru" value="' + esc(v.c) + '">') +
+      '</div>' +
+      '<datalist id="senarai-kat">' + cats().map(function (c) { return '<option value="' + esc(c) + '">'; }).join('') + '</datalist>' +
+      fld('f-sv', 'Bilangan hidangan', '<input id="f-sv" type="number" inputmode="numeric" min="1" value="' + esc(v.sv) + '">') +
+      fld('f-d', 'Penerangan ringkas (pilihan)', '<textarea id="f-d" rows="2">' + esc(v.d) + '</textarea>') +
+      fld('f-bahan', 'Bahan-bahan', '<textarea id="f-bahan" rows="8" placeholder="2 cawan tepung&#10;1 1/2 sdb gula&#10;3 biji telur&#10;garam secukupnya">' + esc(bahan) + '</textarea>',
+        'Satu bahan setiap baris. Letak kuantiti di hadapan (contoh: 2 cawan tepung) supaya boleh dilaraskan mengikut hidangan.') +
+      fld('f-langkah', 'Cara memasak', '<textarea id="f-langkah" rows="8" placeholder="Satu langkah setiap baris">' + esc(langkah) + '</textarea>',
+        'Satu langkah setiap baris. Nombor di hadapan baris akan dibuang kerana ia dijana sendiri.') +
+      fld('f-tip', 'Tip atau catatan (pilihan)', '<textarea id="f-tip" rows="2">' + esc(v.t) + '</textarea>') +
+      fld('f-sumber', 'Sumber (pilihan)', '<input id="f-sumber" type="text" autocomplete="off" placeholder="Nama atau pautan, contoh: resipi nenek" value="' + esc(v.src) + '">',
+        'Untuk resepi dari internet, tulis pautan atau nama laman supaya mudah dirujuk semula.') +
+      '<p class="ralat" id="ralat" role="alert" hidden></p>' +
+      '<div class="btnrow"><button type="submit" class="primary">Simpan resepi</button>' +
+      '<button type="button" class="ghost" data-act="batal">Batal</button></div>' +
+      '</form>';
+  }
+  function readForm() {
+    var g = function (id) { return $(id).value; };
+    var bahan = g('f-bahan');
+    return {
+      n: g('f-nama'), c: g('f-kat'), e: g('f-ikon'), sv: g('f-sv'), d: g('f-d'), t: g('f-tip'), src: g('f-sumber'),
+      raw: bahan.trim(),
+      i: bahan.split('\n').map(parseLine).filter(Boolean),
+      s: g('f-langkah').split('\n').map(function (l) { return l.replace(/^\s*(?:\d+[.)](?!\d)|[-•*·])\s*/, '').trim(); }).filter(Boolean)
+    };
+  }
+  function saveForm() {
+    var d = readForm(), err = '';
+    if (!str(d.n)) err = 'Isi nama resepi.';
+    else if (!d.i.length) err = 'Isi sekurang-kurangnya satu bahan.';
+    else if (!d.s.length) err = 'Isi sekurang-kurangnya satu langkah.';
+    if (err) { var el = $('ralat'); el.textContent = err; el.hidden = false; return; }
+    var cn = str(d.c) || 'Lain-lain';
+    var hit = cats().filter(function (c) { return c.toLowerCase() === cn.toLowerCase(); })[0];
+    d.c = hit || cn;
+    if (!hit) { catList.push(cn); saveCats(); }
+    var rec;
+    if (state.editId && mineIndex(state.editId) >= 0) { d.id = state.editId; rec = clean(d); mine[mineIndex(state.editId)] = rec; }
+    else { d.id = newId(d.n); rec = clean(d); mine.unshift(rec); }
+    var ok = write(KEY_MINE, mine);
+    state.cat = 'Semua'; state.q = ''; state.onlyFav = false; $('cari').value = '';
+    state.sel = rec.id; state.view = 'resepi'; state.editId = null;
+    notice = ok ? 'Resepi disimpan.' : 'Resepi ditambah, tetapi pelayar tidak membenarkan simpanan kekal. Salin sandaran dari butang Sandaran.';
+    refreshAll(); toMain();
+  }
+
+  /* ---------- Kategori ---------- */
+  function renderCats() {
+    var counts = {};
+    all().forEach(function (r) { counts[r.c] = (counts[r.c] || 0) + 1; });
+    $('resepi').innerHTML = '<section class="panel backup">' +
+      '<h2 class="form-title">Kategori</h2>' +
+      '<form id="form-kat" class="katform" novalidate>' +
+        '<div class="fld"><label for="f-katbaru">Kategori baru</label><input id="f-katbaru" type="text" autocomplete="off" placeholder="Contoh: Kerabu"></div>' +
+        '<button type="submit" class="primary">Tambah kategori</button></form>' +
+      '<p id="status-kat" role="status"></p>' +
+      '<ul class="katlist">' + cats().map(function (c) {
+        return '<li><span class="kn">' + esc(c) + '</span><span class="kc">' + (counts[c] || 0) + ' resepi</span>' +
+          '<button type="button" class="ghost danger" data-act="kat-del" data-kat="' + esc(c) + '">Padam</button></li>';
+      }).join('') + '</ul>' +
+      '<p class="hint">Kategori hanya boleh dipadam bila tiada resepi di dalamnya.</p></section>';
+  }
+  function addCat() {
+    var n = str($('f-katbaru').value);
+    if (!n) { say('Taip nama kategori dahulu.', 'status-kat'); return; }
+    if (cats().some(function (c) { return c.toLowerCase() === n.toLowerCase(); })) { say('Kategori itu sudah ada.', 'status-kat'); return; }
+    catList.push(n); saveCats();
+    renderChips(); renderCats(); say('Kategori "' + n + '" ditambah.', 'status-kat');
+  }
+  function delCat(name) {
+    var n = all().filter(function (r) { return r.c === name; }).length;
+    if (n) { say('Kategori ini masih ada ' + n + ' resepi. Padam atau pindahkan resepi itu dahulu.', 'status-kat'); return; }
+    catList = catList.filter(function (c) { return c !== name; }); saveCats();
+    if (state.cat === name) state.cat = 'Semua';
+    renderChips(); refresh(); renderCats(); say('Kategori dipadam.', 'status-kat');
+  }
+
+  /* ---------- Sandaran ---------- */
+  function backupText() { return JSON.stringify({ v: 1, mine: mine, hidden: Object.keys(hidden), favs: Object.keys(favs), kat: catList }); }
+  function renderBackup() {
+    $('resepi').innerHTML = '<section class="panel backup">' +
+      '<h2 class="form-title">Sandaran resepi</h2>' +
+      '<p>Resepi anda disimpan dalam pelayar telefon ini. Jika data pelayar dipadam atau fail ini dialih ke tempat lain, resepi itu akan hilang. Salin sandaran dan simpan di tempat selamat, contohnya dalam aplikasi nota.</p>' +
+      '<div class="fld"><label for="sandaran">Sandaran anda (' + mine.length + ' resepi sendiri)</label>' +
+      '<textarea id="sandaran" rows="5" readonly>' + esc(backupText()) + '</textarea></div>' +
+      '<div class="btnrow"><button type="button" class="primary" data-act="salin-sb">Salin sandaran</button><span id="status-sb" role="status"></span></div>' +
+      '<h3>Pulihkan daripada sandaran</h3>' +
+      '<div class="fld"><label for="pulih">Tampal sandaran di sini</label><textarea id="pulih" rows="5"></textarea></div>' +
+      '<div class="btnrow"><button type="button" class="ghost" data-act="pulih">Pulihkan</button><span id="status-sb2" role="status"></span></div>' +
+      (Object.keys(hidden).length ? '<h3>Resepi contoh</h3><p>Anda telah memadam ' + Object.keys(hidden).length + ' resepi contoh.</p>' +
+        '<div class="btnrow"><button type="button" class="ghost" data-act="contoh">Pulihkan resepi contoh</button><span id="status-sb3" role="status"></span></div>' : '') +
+      '</section>';
+  }
+  function restore() {
+    var t = $('pulih').value.trim(), data;
+    if (!t) { say('Tampal sandaran dahulu.', 'status-sb2'); return; }
+    try { data = JSON.parse(t); } catch (e) { say('Sandaran tidak sah. Salin keseluruhan teks sandaran.', 'status-sb2'); return; }
+    var list = Array.isArray(data) ? data : (data && Array.isArray(data.mine) ? data.mine : null);
+    if (!list) { say('Sandaran tidak sah. Salin keseluruhan teks sandaran.', 'status-sb2'); return; }
+    var n = 0;
+    list.map(clean).filter(Boolean).forEach(function (r) {
+      var k = mineIndex(r.id);
+      if (k >= 0) mine[k] = r; else mine.push(r);
+      n++;
+    });
+    if (data && !Array.isArray(data)) {
+      (Array.isArray(data.hidden) ? data.hidden : []).forEach(function (k) { if (typeof k === 'string') hidden[k] = 1; });
+      (Array.isArray(data.favs) ? data.favs : []).forEach(function (k) { if (typeof k === 'string') favs[k] = 1; });
+      (Array.isArray(data.kat) ? data.kat : []).forEach(function (k) { k = str(k); if (k && catList.indexOf(k) === -1) catList.push(k); });
+    }
+    write(KEY_MINE, mine); write(KEY_HIDE, Object.keys(hidden)); saveFavs(); saveCats();
+    renderChips(); renderList(); renderBackup();
+    say(n + ' resepi dipulihkan.', 'status-sb2');
+  }
+
+  /* ---------- Paparan dan navigasi ---------- */
+  function render() {
+    if (state.view === 'borang') renderForm();
+    else if (state.view === 'sandaran') renderBackup();
+    else if (state.view === 'kategori') renderCats();
+    else renderRecipe();
+    if (notice) { say(notice); notice = ''; }
+  }
+  function refreshAll() {
+    renderChips();
+    if (!byId(state.sel)) { var a = all(); state.sel = a.length ? a[0].id : ''; }
+    renderList(); render();
+  }
+  function toMain() {
+    if (window.matchMedia('(max-width: 860px)').matches) {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      $('resepi').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    }
+  }
+  function select(id, fromUser) {
+    state.sel = id; state.view = 'resepi'; state.editId = null;
+    render(); markActive();
+    try { if (location.hash.slice(1) !== id) location.hash = id; } catch (e) {}
+    if (fromUser) toMain();
+  }
+  function refresh() {
+    var vis = visible();
+    renderList();
+    if (vis.length && !vis.some(function (r) { return r.id === state.sel; })) {
+      state.sel = vis[0].id;
+      if (state.view === 'resepi') renderRecipe();
+      markActive();
+    }
+  }
+  function removeRecipe(r) {
+    if (r.u) { mine.splice(mineIndex(r.id), 1); write(KEY_MINE, mine); }
+    else { hidden[r.id] = 1; write(KEY_HIDE, Object.keys(hidden)); }
+    delete favs[r.id]; saveFavs();
+    notice = 'Resepi dipadam.';
+    refreshAll();
+  }
+
+  /* ---------- Acara ---------- */
+  $('resepi').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-act]'); if (!b) return;
+    var a = b.getAttribute('data-act'), r = byId(state.sel);
+    if (a === 'inc' || a === 'dec') {
+      var s = (serv[r.id] || r.sv) + (a === 'inc' ? 1 : -1);
+      serv[r.id] = Math.min(20, Math.max(1, s));
+      $('bahan').innerHTML = ingHtml(r); syncStepper(r);
+    } else if (a === 'fav') {
+      if (favs[r.id]) delete favs[r.id]; else favs[r.id] = 1;
+      saveFavs();
+      b.setAttribute('aria-pressed', String(!!favs[r.id]));
+      b.textContent = favs[r.id] ? '★ Dalam kegemaran' : '☆ Simpan kegemaran';
+      renderChips(); renderList();
+    } else if (a === 'copy') {
+      copyText(recipeText(r), $('salin-teks'), 'status', 'Resepi disalin.', 'Tidak dapat menyalin automatik. Teks sudah dipilih di bawah, salin secara manual.');
+    } else if (a === 'edit') {
+      state.view = 'borang'; state.editId = r.id; render(); markActive(); toMain();
+    } else if (a === 'del') {
+      if (!b.dataset.armed) {
+        b.dataset.armed = '1'; b.textContent = 'Tekan lagi untuk padam';
+        setTimeout(function () { if (b.isConnected) { delete b.dataset.armed; b.textContent = 'Padam'; } }, 4000);
+        return;
+      }
+      removeRecipe(r);
+    } else if (a === 'batal') {
+      state.view = 'resepi'; state.editId = null; render(); markActive();
+    } else if (a === 'salin-sb') {
+      copyText(backupText(), $('sandaran'), 'status-sb', 'Sandaran disalin. Simpan di tempat selamat.', 'Tidak dapat menyalin automatik. Teks sudah dipilih, salin secara manual.');
+    } else if (a === 'pulih') {
+      restore();
+    } else if (a === 'kat-del') {
+      delCat(b.getAttribute('data-kat'));
+    } else if (a === 'contoh') {
+      hidden = {}; write(KEY_HIDE, []);
+      renderChips(); renderList(); renderBackup(); say('Resepi contoh dipulihkan.', 'status-sb3');
+    }
+  });
+  $('resepi').addEventListener('submit', function (e) {
+    if (e.target.id === 'borang') { e.preventDefault(); saveForm(); }
+    else if (e.target.id === 'form-kat') { e.preventDefault(); addCat(); }
+  });
+  $('resepi').addEventListener('change', function (e) {
+    var cb = e.target;
+    if (!cb.matches || !cb.matches('input[type="checkbox"][data-n]')) return;
+    var set = checked[state.sel] || (checked[state.sel] = {});
+    set[cb.getAttribute('data-n')] = cb.checked;
+  });
+  $('senarai').addEventListener('click', function (e) {
+    var b = e.target.closest('.item'); if (b) select(b.getAttribute('data-id'), true);
+  });
+  $('chips').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    if (b.id === 'chip-fav') state.onlyFav = !state.onlyFav;
+    else state.cat = b.getAttribute('data-cat');
+    renderChips(); refresh();
+  });
+  $('cari').addEventListener('input', function (e) { state.q = e.target.value; refresh(); });
+  $('btn-tambah').addEventListener('click', function () { state.view = 'borang'; state.editId = null; render(); markActive(); toMain(); });
+  $('btn-sandaran').addEventListener('click', function () { state.view = 'sandaran'; state.editId = null; render(); markActive(); toMain(); });
+  $('btn-kategori').addEventListener('click', function () { state.view = 'kategori'; state.editId = null; render(); markActive(); toMain(); });
+  window.addEventListener('hashchange', function () {
+    var r = byId(location.hash.slice(1));
+    if (r && (r.id !== state.sel || state.view !== 'resepi')) {
+      state.cat = 'Semua'; state.q = ''; state.onlyFav = false; $('cari').value = '';
+      renderChips(); renderList(); select(r.id, false);
+    }
+  });
+
+  var start = byId(location.hash.slice(1));
+  if (start) state.sel = start.id;
+  if (!write('dapur-resepi-uji', 1)) notice = 'Pelayar ini tidak membenarkan simpanan. Resepi baru akan hilang bila halaman ditutup.';
+  refreshAll();
+})();
+</script>
+</body>
+</html>
