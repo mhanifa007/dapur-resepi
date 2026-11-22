@@ -1,6 +1,6 @@
 {
-  "name": "Dapur Resepi",
-  "short_name": "Dapur Resepi",
+  "name": "Dashboard Resepi Masakan",
+  "short_name": "Resepi Masakan",
   "description": "Simpan resepi sendiri dan resepi pilihan.",
   "lang": "ms",
   "start_url": "./",
